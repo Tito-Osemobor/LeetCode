@@ -1,17 +1,17 @@
 class Solution {
     public String interpret(String command) {
-        String result = "";
+        StringBuilder S = new StringBuilder(command.length());
         for (int i = 0; i < command.length(); i ++) {
             if (command.charAt(i) == '(' && command.charAt(i+1) == ')') {
-                result += 'o';
+                S.append('o');
             }
             else if (command.charAt(i) == '(' || command.charAt(i) == ')') {
                 continue;
             }
             else {
-                result += command.charAt(i);
+                S.append(command.charAt(i));
             }
         }
-        return result;
+        return S.toString();
     }
 }
