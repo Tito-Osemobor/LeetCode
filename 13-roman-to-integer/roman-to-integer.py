@@ -15,11 +15,8 @@ class Solution:
 
         # IX
         for i in range(len(s)):
-            if i < len(s) - 1:
-                if conversion[s[i]] < conversion[s[i+1]]:
-                    ans -= conversion[s[i]]
-                else:
-                    ans += conversion[s[i]]
+            if i < len(s) -  1 and conversion[s[i]] < conversion[s[i+1]]:
+                ans -= conversion[s[i]]
             else:
                 ans += conversion[s[i]]
 
