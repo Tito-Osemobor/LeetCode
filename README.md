@@ -10,4 +10,4 @@ I'm Tito, a passionate coder and enthusiast for algorithms and data structures. 
 
 Each problem solution is organized in its own directory, with the problem and the respective code file and, where applicable, additional resources such as explanations or alternative solutions.
 
-Collection of LeetCode questions to ace the coding interview! - Created using [LeetHub v2](https://github.com/arunbhardwaj/LeetHub-2.0)
+
