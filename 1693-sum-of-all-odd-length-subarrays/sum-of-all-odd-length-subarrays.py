@@ -1,9 +1,7 @@
 class Solution:
     def sumOddLengthSubarrays(self, arr: List[int]) -> int:
-        total = sum(arr)
-        for i in range(0, len(arr) - 2):
-            j = i + 3
-            while j <= len(arr):
-                total += sum(arr[i:j])
-                j += 2
-        return total
+        res = 0; freq = 0; n = len(arr)
+        for i in range(n):
+            freq = freq - ( i + 1) // 2 + ( n - i + 1 ) // 2
+            res += freq * arr[i]
+        return res
