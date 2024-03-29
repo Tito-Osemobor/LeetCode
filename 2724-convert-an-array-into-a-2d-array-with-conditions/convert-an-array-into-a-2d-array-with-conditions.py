@@ -1,7 +1,8 @@
 class Solution:
     def findMatrix(self, nums: List[int]) -> List[List[int]]:
         count = Counter(nums)
-        res = [[] for _ in range(max(count.values()))]
+        high = max(count.values())
+        res = [[] for _ in range(high)]
         for n, c in count.items():
             while c:
                 res[c-1].append(n)
