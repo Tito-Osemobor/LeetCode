@@ -1,16 +1,9 @@
 class Solution:
     def findMatrix(self, nums: List[int]) -> List[List[int]]:
-        dic = {}
-        ans = [[]]
-        max = 0
-        for num in nums:
-            if num not in dic:
-                dic[num] = 0
-            else:
-                dic[num] += 1
-                if dic[num] > max:
-                    ans.append([])
-                    max = dic[num]
-            ans[dic[num]].append(num)
-        return ans
-                
+        count = Counter(nums)
+        res = [[] for _ in range(max(count.values()))]
+        for n, c in count.items():
+            while c:
+                res[c-1].append(n)
+                c -= 1
+        return res
